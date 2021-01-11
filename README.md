@@ -6,15 +6,15 @@ Modified by [Warden Eternal](https://github.com/TheWardenEternal)
 - Download https://github.com/TheWardenEternal/esx_steal/archive/main.zip
 - Put it in any directory
 
-### Requirements
-- ESX v1.1-FINAL [[ Hasn't been tested on any other version ]]
-
 ### Installation
 - Add this to your `server.cfg`
 
 ```
 start esx_steal
 ```
+
+### Requirements
+- ESX v1-FINAL (hasn't been tested on any other version)
 
 ### Features
 - Victim must have their hands up before robbing may begin (unless dead)
