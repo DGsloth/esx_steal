@@ -15,6 +15,7 @@ start esx_steal
 
 ### Requirements
 - ESX v1-FINAL (hasn't been tested on any other version)
+- [mythic_resources](https://github.com/TheWardenEternal/mythic_resources/archive/main.zip)
 
 ### Features
 - Victim must have their hands up before robbing may begin (unless dead)
