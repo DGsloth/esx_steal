@@ -61,7 +61,7 @@ AddEventHandler('esx_steal:playerIsRobbingSomeone', function()
 	Wait(250)
 	loadanimdict('combat@aim_variations@arrest')
 	TaskPlayAnim(GetPlayerPed(-1), 'combat@aim_variations@arrest', 'cop_med_arrest_01', 8.0, -8,3750, 2, 0, 0, 0, 0)
-	exports['mythic_progbar']:Progress({name = "robmebitch", duration = 3000, label = "Searching Person", useWhileDead = true, canCancel = false, controlDisables = {disableMovement = true, disableCarMovement = true, disableMouse = false, disableCombat = true}})
+	exports['mythic_progbar']:Progress({name = 'robmebitch', duration = 3000, label = 'Searching Person', useWhileDead = true, canCancel = false, controlDisables = {disableMovement = true, disableCarMovement = true, disableMouse = false, disableCombat = true}})
 	Wait(3000)
 	OpenBodySearchMenu(target)
  end)
@@ -106,6 +106,37 @@ function OpenBodySearchMenu(player)
         end)
     end, GetPlayerServerId(player))
 end
+
+CreateThread(function()
+	local playerPed = GetPlayerPed(-1)
+	local handsup = false
+	while true do
+		RequestAnimDict('random@mugging3')
+		if IsControlPressed(1, 323) then
+			if DoesEntityExist(playerPed) and not IsPedSittingInAnyVehicle(playerPed) then
+				Citizen.CreateThread(function()
+					RequestAnimDict('random@mugging3')
+					while not HasAnimDictLoaded('random@mugging3') do Citizen.Wait(100) end
+					if not handsup then
+						handsup = true
+						TaskPlayAnim(playerPed, 'random@mugging3', 'handsup_standing_base', 4.0, -4.0, -1, 49, 1, 0, 0, 0)
+					end
+				end)
+			end
+		end
+		if IsControlReleased(1, 323) then
+			if DoesEntityExist(playerPed) and not IsPedSittingInAnyVehicle(playerPed) then
+				Citizen.CreateThread(function()
+					if handsup then
+						handsup = false
+						ClearPedSecondaryTask(playerPed)
+					end
+				end)
+			end
+		end
+		Wait(0)
+	end
+end)
 
 CreateThread(function()
 	while true do
