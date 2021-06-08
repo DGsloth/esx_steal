@@ -1,9 +1,9 @@
 # esx_steal
 Original resource created by [AxisGe0](https://github.com/AxisGe0/gc-inventory)  
-Modified by [sloth](https://github.com/DGSloth)
+Modified by [thatsimpressive](https://github.com/thatsimpressive)
 
 ### Download
-- Download https://github.com/DGSloth/esx_steal/archive/main.zip
+- Download https://github.com/thatsimpressive/esx_steal/archive/main.zip
 - Put it in any directory
 
 ### Installation
@@ -15,7 +15,7 @@ start esx_steal
 
 ### Requirements
 - ESX v1-FINAL (hasn't been tested on any other version)
-- [mythic_resources](https://github.com/TheWardenEternal/mythic_resources/archive/main.zip)
+- [mythic_resources](https://github.com/thatsimpressive/mythic_resources/archive/main.zip)
 
 ### Features
 - Proper robbing system that isn't broken (or like the standard robbing script where you have to aim and release E at the same time to work)
