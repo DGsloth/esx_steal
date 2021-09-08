@@ -1,5 +1,5 @@
 # esx_steal
-Original resource created by [AxisGe0](https://github.com/AxisGe0/gc-inventory)
+Original resource created by [AxisGe0](https://github.com/AxisGe0/gc-inventory)  
 Modified by [VanguardianDG](https://github.com/VanguardianDG)
 
 ### Download
